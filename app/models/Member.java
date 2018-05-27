@@ -42,5 +42,14 @@ public class Member extends Model
         this.startingweight = startingweight;
     }
 
+    public static Member findByEmail(String email)
+    {
+        return find("email", email).first();
+    }
+
+    public boolean checkPassword(String password)
+    {
+        return this.password.equals(password);
+    }
 
 }
