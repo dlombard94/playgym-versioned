@@ -1,0 +1,44 @@
+class="ui segment">
+<div class="ui four small statistics">
+    <div class="ui statistic">
+        <div class="value">
+            <i class="user icon"></i>
+        </div>
+        <div class="label">
+        ${_member.name}
+        </div>
+    </div>
+
+    <div class="ui statistic">
+        <div class="value">
+            <i class="heartbeat icon"></i>${_memberBmi}
+        </div>
+        <div class="label">
+            BMI
+        </div>
+    </div>
+
+    <div class="ui statistic">
+        <div class="value">
+            <i class="user md icon"></i>
+        </div>
+        <div class="label">
+        ${_memberCategory}
+        </div>
+    </div>
+
+    <div class="ui statistic">
+        <div class="value">
+        #{if _memberIdealWeight}
+            <i class="green thumbs up outline icon"></i>
+        #{/if}
+        #{if !_memberIdealWeight}
+            <i class="red thumbs down outline icon"></i>
+        #{/if}
+        </div>
+        <div class="label">
+            Ideal Weight Indicator
+        </div>
+    </div>
+</div>
+</section>
