@@ -1,7 +1,6 @@
 package controllers;
 
 import models.Member;
-import models.Trainer;
 import play.Logger;
 import play.mvc.Controller;
 
@@ -45,7 +44,8 @@ public class Accounts extends Controller
         redirect("/dashboard");
     }
 
-    public static void authenticate(String email, String password) {
+    public static void authenticate(String email, String password)
+    {
         Logger.info("Attempting to authenticate with " + email + ":" + password);
 
         //when logging in it checks if the email and password belong to a member
@@ -54,23 +54,13 @@ public class Accounts extends Controller
         if ((member != null) && (member.checkPassword(password) == true)) {
             Logger.info("Authentication successful");
             session.put("logged_in_Memberid", member.id);
-            redirect("/dashboard");
-        } else {
-            //if not a member it checks if you are a trainer
-            //if so it brings you to the trainer dashboard and allows you to see all the members
-            Trainer trainer = Trainer.findByEmail(email);
-            if ((trainer != null) && (trainer.checkPassword(password) == true)) {
-                Logger.info("Authentication successful");
-                session.put("logged_in_Trainerid", trainer.id);
-                redirect("/trainerpage");
-
-            } else {
+            redirect ("/dashboard");
+        }else{
                 //if credentials don't belong to wither then it brings you back to the login page
                 Logger.info("Authentication failed");
                 redirect("/login");
             }
         }
-    }
 
 
     public static void logout()
