@@ -6,6 +6,7 @@
 GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
 GET     /about                                  About.index
+GET     /trainerpage                            TrainerPage.index
 
 GET    /signup                                  Accounts.signup
 GET    /login                                   Accounts.login
@@ -13,8 +14,13 @@ POST   /register                                Accounts.register
 POST   /authenticate                            Accounts.authenticate
 GET    /logout                                  Accounts.logout
 
+GET     /trainerpage/viewmember/{id}            TrainerPage.viewMember
+GET     /trainerpage/deletemember/{id}          TrainerPage.deleteMember
+POST    /trainer/assessment/{id}/updatecomment  TrainerPage.updateComment
+
 POST    /dashboard/{id}/addassessment                    Dashboard.addAssessment
 GET     /dashboard/{id}/deleteassessment/{assessmentid}  Dashboard.deleteAssessment
+GET     /member/deletemember/{id}                        Dashboard.deleteMember
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
