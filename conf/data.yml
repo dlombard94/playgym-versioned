@@ -34,3 +34,7 @@ Member(m2):
  gender: F
  height: 1.5
  startingweight: 65
+
+Trainer(t1):
+ email: trainer@trainer.com
+ password: trainer
