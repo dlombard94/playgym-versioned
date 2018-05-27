@@ -1,0 +1,36 @@
+Assessment(a1):
+ weight: 80
+ chest: 45.0
+ thigh: 12.5
+ upperarm: 23.3
+ waist: 32
+ hips: 38
+
+Assessment(a2):
+ weight: 85
+ chest: 45.0
+ thigh: 12
+ upperarm: 23.3
+ waist: 31
+ hips: 36
+
+Member(m1):
+ email: member1@member.com
+ password: member
+ name: Tom Tomson
+ address: Cork
+ gender: M
+ height: 2.0
+ startingweight: 90
+ assessments:
+ - a1
+ - a2
+
+Member(m2):
+ email: member2@member.com
+ password: member
+ name: Mary Tomson
+ address: Waterford
+ gender: F
+ height: 1.5
+ startingweight: 65
