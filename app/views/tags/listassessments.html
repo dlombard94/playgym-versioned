@@ -7,6 +7,8 @@
         <th>Upper Arm</th>
         <th>Waist</th>
         <th>Hips</th>
+        <th>Comment</th>
+        <th>Weight Progress</th>
         <th></th>
     </tr>
     </thead>
@@ -30,6 +32,18 @@
         </td>
         <td>
         ${assessment.hips}
+        </td>
+        <td>
+        ${assessment.comment}
+        </td>
+        <td>
+        *{uses a method from the member model to determine if weight progress is made in  a specific assessment}*
+            #{if _member.madeProgress(assessment)}
+                <i class="green thumbs up outline icon"></i>
+            #{/if}
+            #{if !_member.madeProgress(assessment)}
+                <i class="red thumbs down outline icon"></i>
+            #{/if}
         </td>
         <td>
         *{takes the member id and assessment id and passes to them to the delete assessment method via the route}*
