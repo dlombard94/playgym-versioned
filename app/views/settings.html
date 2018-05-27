@@ -1,0 +1,48 @@
+#{extends 'main.html' /}
+#{set title:'Settings' /}
+
+#{membermenu id:"settings"/}
+*{calls route to Accounts.updateSettings}*
+<div class="ui one column grid basic middle aligned segment">
+    <div class="column">
+        <form class="ui stacked segment form" action="/updatesettings" method="POST">
+            <h3 class="ui header">Settings</h3>
+            <div class="two fields">
+                <div class="field">
+                    <label>Name</label>
+                    <input placeholder="Tom Tomson" type="text" name="name">
+                </div>
+                <div class="field">
+                    <label>Gender</label>
+                    <input placeholder="Gender" type="text" name="gender">
+                </div>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input placeholder="Email" type="text" name="email">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="field">
+                <label>Address</label>
+                <input type="text" name="address">
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Height</label>
+                    <input placeholder="2.0m" type="text" name="height">
+                </div>
+                <div class="field">
+                    <label>Starting Weight</label>
+                    <input placeholder="Starting Weight" type="text" name="startingweight">
+                </div>
+            </div>
+            <button class="ui blue submit button">Submit</button>
+        </form>
+    </div>
+    <div class="column">
+
+    </div>
+</div>

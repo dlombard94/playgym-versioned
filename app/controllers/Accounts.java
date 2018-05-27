@@ -28,6 +28,8 @@ public class Accounts extends Controller
         redirect("/");
     }
 
+   
+
     public static void updateSettings(String name, String gender, String email, String password, String address, double height, double startingweight){
         Member member = getLoggedInMember();
         //takes all the information from the updateSettings form and passes them here via the route

@@ -10,6 +10,8 @@ GET     /trainerpage                            TrainerPage.index
 
 GET    /signup                                  Accounts.signup
 GET    /login                                   Accounts.login
+GET    /settings                                Accounts.settings
+POST   /updatesettings                          Accounts.updateSettings
 POST   /register                                Accounts.register
 POST   /authenticate                            Accounts.authenticate
 GET    /logout                                  Accounts.logout
