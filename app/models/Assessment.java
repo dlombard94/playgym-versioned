@@ -14,6 +14,8 @@ public class Assessment extends Model
     public double upperArm;
     public double waist;
     public double hips;
+    public Date date;
+    public String comment;
 
 
     public Assessment(double weight, double chest, double thigh, double upperArm, double waist, double hips)
@@ -24,6 +26,7 @@ public class Assessment extends Model
         this.upperArm = upperArm;
         this.waist = waist;
         this.hips = hips;
-
+        //the default constructor for Date() initializes it with the current date and time
+        this.date = new Date();
     }
 }
