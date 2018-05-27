@@ -7,6 +7,7 @@
         <th>Upper Arm</th>
         <th>Waist</th>
         <th>Hips</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -29,6 +30,10 @@
         </td>
         <td>
         ${assessment.hips}
+        </td>
+        <td>
+        *{takes the member id and assessment id and passes to them to the delete assessment method via the route}*
+            <a href="/dashboard/${_member.id}/deleteassessment/${assessment.id}" class = "ui icon button"><i class="trash icon"></i></a>
         </td>
     #{/list}
     </tbody>
