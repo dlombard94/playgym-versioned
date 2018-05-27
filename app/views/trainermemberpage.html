@@ -1,0 +1,13 @@
+#{extends 'main.html' /}
+#{set title:'Trainer Member Page' /}
+
+#{trainermenu id:"trainerpage"/}
+
+
+<section class="ui segment">
+#{membersummary member:member, memberBmi:memberBmi , memberCategory:memberCategory, memberIdealWeight:memberIdealWeight/}
+    <h2 class="ui header">
+    ${member.name}'s Assessment's
+    </h2>
+#{trainerlistassessments member:member, progressReport:progressReport/}
+</section>

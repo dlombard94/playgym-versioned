@@ -1,0 +1,10 @@
+#{extends 'main.html' /}
+#{set title:'Trainer Page' /}
+
+#{trainermenu id:"dashboard"/}
+
+
+<section class="ui segment">
+*{the membersList variable is passed from the controller method trainerpage.Index()}*
+#{listmembers membersList:membersList /}
+</section>

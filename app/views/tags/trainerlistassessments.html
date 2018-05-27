@@ -1,0 +1,44 @@
+#{list items:_member.assessments, as:'assessment'}
+<table class="ui fixed table">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Weight</th>
+        <th>Chest</th>
+        <th>Thigh</th>
+        <th>Upper Arm</th>
+        <th>Waist</th>
+        <th>Hips</th>
+        <th>Comment</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+        ${assessment.date}
+        </td>
+        <td>
+        ${assessment.weight}
+        </td>
+        <td>
+        ${assessment.chest}
+        </td>
+        <td>
+        ${assessment.thigh}
+        </td>
+        <td>
+        ${assessment.upperArm}
+        </td>
+        <td>
+        ${assessment.waist}
+        </td>
+        <td>
+        ${assessment.hips}
+        </td>
+        <td>
+        ${assessment.comment}
+        </td>
+    </tbody>
+</table>
+    #{addcomment assessment:assessment/}
+#{/list}

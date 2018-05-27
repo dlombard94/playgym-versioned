@@ -1,0 +1,13 @@
+*{loops through eacg member in the membersList variable}*
+#{list items: _membersList, as: 'member'}
+<section class="ui segment">
+    <h2 class ='ui header'>
+    ${member.name}
+    </h2>
+    <p>${member.assessments.size()} Assessments</p>
+*{calls the route to TrainerPage.viewMember(Long id)}*
+    <a href="/trainerpage/viewmember/${member.id}" class="ui button icon"><i class="folder open icon"></i></a>
+*{calls the route to TrainerPage.deleteMember(Long id)}*
+    <a href="/trainerpage/deletemember/${member.id}" class="ui button icon"><i class="trash icon"></i></a>
+</section>
+#{/list}
