@@ -5,6 +5,8 @@ Assessment(a1):
  upperarm: 23.3
  waist: 32
  hips: 38
+ date: 2018-01-01 05:30:00
+
 
 Assessment(a2):
  weight: 85
@@ -13,6 +15,8 @@ Assessment(a2):
  upperarm: 23.3
  waist: 31
  hips: 36
+ date: 2018-01-11 05:30:00
+
 
 Member(m1):
  email: member1@member.com
